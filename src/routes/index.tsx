@@ -1,9 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import logo from "@/assets/logo.png";
 import tortilla from "@/assets/hero-ilustracion.png";
-import milpa from "@/assets/milpa.jpg";
-import mazorcas from "@/assets/mazorcas.jpg";
-import manos from "@/assets/manos-tortilla.jpg";
 
 const TITLE = "Memorias de Maíz — Tortillas de maíz seleccionado";
 const DESC =
@@ -37,22 +34,17 @@ function Index() {
 
       {/* 01 Hero */}
       <section className="hero">
-        <div className="wrap hero-grid">
-          <div className="hero-top">
-            <p className="hero-eyebrow">Tortillas de maíz orgánico seleccionado</p>
-            <h1>Maíces que vale la pena conocer.</h1>
+        <div className="hero-bg" aria-hidden="true">
+          <img src={tortilla} alt="" />
+        </div>
+        <div className="wrap">
+          <div className="hero-inner">
+            <p className="hero-eyebrow">Nixtamalizamos en lotes pequeños</p>
+            <h1>Tortillas de maíz orgánico seleccionado</h1>
             <p className="body">Hacemos tortillas con maíz seleccionado por su sabor, agua y cal. <strong>Sin harinas. Sin conservadores. Sin aditivos.</strong></p>
             <div className="hero-cta">
               <a className="btn btn-ghost" href="#maiz">Conocer el maíz</a>
             </div>
-          </div>
-
-          <div className="hero-visual">
-            {/* Imagen ilustrativa — reemplazar por fotografía propia o de Tamoa con permiso de uso */}
-            <figure className="hero-photo">
-              <img src={milpa} alt="Milpa con plantas de maíz al atardecer" width={1600} height={1008} />
-            </figure>
-            <img className="hero-tortilla" src={tortilla} alt="" aria-hidden="true" />
           </div>
         </div>
 
@@ -92,10 +84,6 @@ function Index() {
               <h2>El maíz detrás de cada tortilla</h2>
               <p>Nuestros maíces vienen de familias que conocen y conservan sus variedades generación tras generación. Cada costal que recibimos tiene un origen identificable y una historia que queremos poder seguir: de dónde viene, quién lo cultivó y, sobre todo, qué encontramos en él cuando llega a nuestra cocina.</p>
             </div>
-            {/* Imagen ilustrativa — reemplazar por fotografía propia o de Tamoa con permiso de uso */}
-            <figure className="photo-frame maize-photo">
-              <img src={mazorcas} alt="Mazorcas de maíz blanco, amarillo y azul" loading="lazy" width={1200} height={1504} />
-            </figure>
           </div>
 
           <div className="variety-grid">
@@ -138,10 +126,6 @@ function Index() {
             <h2>Una tortilla hecha de maíz.</h2>
             <p className="sub">Nada más.</p>
             <p className="copy">Por ahora trabajamos una sola tortilla: la que hacemos con nuestro Cónico Cremoso.</p>
-            {/* Imagen ilustrativa — reemplazar por fotografía propia con permiso de uso */}
-            <figure className="photo-frame product-photo">
-              <img src={manos} alt="Manos sosteniendo una tortilla recién hecha sobre el comal" loading="lazy" width={1200} height={1504} />
-            </figure>
           </div>
 
           <div className="spec-card">
