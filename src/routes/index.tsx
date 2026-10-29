@@ -1,8 +1,9 @@
 import { createFileRoute } from "@tanstack/react-router";
 import logo from "@/assets/logo.png";
-import tortilla from "@/assets/hero-ilustracion.png";
+import tortilla from "@/assets/tortillahero.png.asset.json";
+import packages from "@/assets/tortillaspaquetes.png.asset.json";
 
-const TITLE = "Memorias de Maíz — Tortillas de maíz seleccionado";
+const TITLE = "Memorias de Maíz: Tortillas de maíz seleccionado";
 const DESC =
   "Tortillas hechas con maíz nativo seleccionado por su sabor. Sin harinas, sin conservadores, sin aditivos. Muestras diarias en Pabellón Instantes Prolongados, Centrito Valle.";
 
@@ -35,7 +36,7 @@ function Index() {
       {/* 01 Hero */}
       <section className="hero">
         <div className="hero-bg" aria-hidden="true">
-          <img src={tortilla} alt="" />
+          <img src={tortilla.url} alt="" />
         </div>
         <div className="wrap">
           <div className="hero-inner">
@@ -54,9 +55,9 @@ function Index() {
               <span className="big">3</span>
               <span className="label">muestras gratis cada día</span>
             </div>
-            <p className="urge">Pruébalas — hay solo 3 al día, mientras haya existencias.</p>
+            <p className="urge">Pruébalas, hay solo 3 al día, mientras haya existencias.</p>
             <a className="btn btn-primary" href={`${WA}?text=Hola%2C%20quiero%20apartar%20una%20muestra%20gratis`} target="_blank" rel="noopener">Apartar mi muestra</a>
-            <p className="sample-fine">Pruebas y entregas en el Pabellón Instantes Prolongados — el de los tubos rojos, en la cuchilla de Orinoco y Colorado. Pickup únicamente.</p>
+            <p className="sample-fine">Pruebas y entregas en el Pabellón Instantes Prolongados (el de los tubos rojos, en la cuchilla de Orinoco y Colorado). Pickup únicamente.</p>
           </div>
         </div>
       </section>
@@ -65,7 +66,7 @@ function Index() {
       <section id="sobre" className="tone-masa">
         <div className="wrap about-grid">
           <div>
-            <span className="num">01 — Sobre Memorias de Maíz</span>
+            <span className="num">01. Sobre Memorias de Maíz</span>
             <h2>Estamos conociendo al maíz.</h2>
           </div>
           <div className="copy">
@@ -80,7 +81,7 @@ function Index() {
         <div className="wrap">
           <div className="maize-head">
             <div className="maize-intro">
-              <span className="num">02 — Nuestro maíz</span>
+              <span className="num">02. Nuestro maíz</span>
               <h2>El maíz detrás de cada tortilla</h2>
               <p>Nuestros maíces vienen de familias que conocen y conservan sus variedades generación tras generación. Cada costal que recibimos tiene un origen identificable y una historia que queremos poder seguir: de dónde viene, quién lo cultivó y, sobre todo, qué encontramos en él cuando llega a nuestra cocina.</p>
             </div>
@@ -122,10 +123,13 @@ function Index() {
       <section id="tortillas" className="tone-masa">
         <div className="wrap product-grid">
           <div>
-            <span className="num">03 — Las tortillas</span>
+            <span className="num">03. Las tortillas</span>
             <h2>Una tortilla hecha de maíz.</h2>
             <p className="sub">Nada más.</p>
             <p className="copy">Por ahora trabajamos una sola tortilla: la que hacemos con nuestro Cónico Cremoso.</p>
+            <figure className="package-photo">
+              <img src={packages.url} alt="Paquetes de tortillas de Memorias de Maíz, Cónico Cremoso" loading="lazy" width="768" height="1024" />
+            </figure>
           </div>
 
           <div className="spec-card">
@@ -146,7 +150,7 @@ function Index() {
       {/* 05 Encuéntranos */}
       <section id="encuentranos">
         <div className="wrap">
-          <span className="num">04 — Encuéntranos</span>
+          <span className="num">04. Encuéntranos</span>
           <h2 className="find-title">Prueba. Compra. O ven a conocernos.</h2>
           <div className="find-grid">
             <div className="find-card">
