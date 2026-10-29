@@ -195,7 +195,7 @@ html{scroll-behavior:smooth;}
 /* hero */
 .mm .hero{padding:88px 0 96px; overflow:clip;}
 .mm .hero-bg{position:absolute; inset:0; display:flex; align-items:center; justify-content:center; pointer-events:none;}
-.mm .hero-bg img{width:min(86vw,880px); opacity:.16; mix-blend-mode:multiply; animation:mmSpin 90s linear infinite;}
+.mm .hero-bg img{width:min(86vw,880px); opacity:.22; mix-blend-mode:multiply; animation:mmSpin 90s linear infinite;}
 @keyframes mmSpin{to{transform:rotate(360deg);}}
 .mm .hero-inner{position:relative; z-index:1; max-width:860px; margin:0 auto; text-align:center;}
 .mm .hero-eyebrow{font-size:.8rem; font-weight:600; letter-spacing:.14em; text-transform:uppercase; color:var(--mm-milpa); margin-bottom:24px;}
@@ -286,7 +286,7 @@ html{scroll-behavior:smooth;}
 @media (max-width:900px){
   .mm section{padding:76px 0;}
   .mm .hero{padding:56px 0 72px;}
-  .mm .hero-bg img{width:130vw; opacity:.12;}
+  .mm .hero-bg img{width:130vw; opacity:.16;}
   .mm .about-grid,.mm .product-grid,.mm .variety-grid,.mm .find-grid{grid-template-columns:1fr; gap:40px;}
   .mm .about-grid .copy{border-left:none; padding-left:0; padding-top:0;}
   .mm .maize-head{margin-bottom:48px;}
