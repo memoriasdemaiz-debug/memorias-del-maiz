@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import logo from "@/assets/logo.png";
-import tortilla from "@/assets/tortillahero.png.asset.json";
-import packages from "@/assets/tortillaspaquetes.png.asset.json";
+import tortilla from "@/assets/tortillahero.png";
+import packages from "@/assets/tortillaspaquetes.webp";
 
 const TITLE = "Memorias de Maíz: Tortillas de maíz seleccionado";
 const DESC =
