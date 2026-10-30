@@ -1,5 +1,5 @@
-import { createFileRoute } from "@tanstack/react-router";
-import logo from "@/assets/logo.png";
+import { createFileRoute, Link } from "@tanstack/react-router";
+import { SiteFooter, Topbar, WA } from "@/components/site-chrome";
 import tortilla from "@/assets/tortillahero.webp";
 import packages from "@/assets/tortillaspaquetes.webp";
 
@@ -21,17 +21,10 @@ export const Route = createFileRoute("/")({
   component: Index,
 });
 
-const WA = "https://wa.me/528133937901";
-
 function Index() {
   return (
     <div className="mm">
-      <div className="topbar">
-        <div className="topbar-inner">
-          <img className="logo-mark" src={logo} alt="Memorias de Maíz" />
-          <a className="wa-mini" href={`${WA}?text=Hola%2C%20quiero%20probar%20las%20tortillas%20de%20Memorias%20de%20Ma%C3%ADz`} target="_blank" rel="noopener">Pide por WhatsApp</a>
-        </div>
-      </div>
+      <Topbar />
 
       {/* 01 Hero */}
       <section className="hero">
@@ -145,6 +138,9 @@ function Index() {
               <div className="price">$90 <span>MXN / paquete</span></div>
             </div>
             <a className="btn btn-primary btn-block" href={`${WA}?text=Hola%2C%20quiero%20un%20paquete%20de%20tortillas`} target="_blank" rel="noopener">Pedir este paquete</a>
+            <p className="guide-note">
+              ¿Ya tienes tu paquete? <Link to="/guia">Consulta nuestra Guía de conservación y calentado →</Link>
+            </p>
           </div>
         </div>
       </section>
@@ -175,17 +171,7 @@ function Index() {
         </div>
       </section>
 
-      <footer>
-        <div className="wrap footer-inner">
-          <div className="brand-mark">Memorias <em>de Maíz</em></div>
-          <div className="footer-links">
-            <a href="https://instagram.com/memoriasdemaiz" target="_blank" rel="noopener">@memoriasdemaiz</a>
-            <a href={WA} target="_blank" rel="noopener">WhatsApp</a>
-          </div>
-        </div>
-      </footer>
-
-      <a className="float-wa" href={`${WA}?text=Hola%2C%20quiero%20pedir%20tortillas%20de%20Memorias%20de%20Ma%C3%ADz`} target="_blank" rel="noopener">Pide por WhatsApp</a>
+      <SiteFooter />
     </div>
   );
 }
