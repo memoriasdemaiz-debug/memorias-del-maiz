@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import logo from "@/assets/logo.png";
-import tortilla from "@/assets/tortillahero.png.asset.json";
-import packages from "@/assets/tortillaspaquetes.png.asset.json";
+import tortilla from "@/assets/tortillahero.webp";
+import packages from "@/assets/tortillaspaquetes.webp";
 
 const TITLE = "Memorias de Maíz: Tortillas de maíz seleccionado";
 const DESC =
@@ -36,7 +36,7 @@ function Index() {
       {/* 01 Hero */}
       <section className="hero">
         <div className="hero-bg" aria-hidden="true">
-          <img src={tortilla.url} alt="" />
+          <img src={tortilla} alt="" />
         </div>
         <div className="wrap">
           <div className="hero-inner">
@@ -128,7 +128,7 @@ function Index() {
             <p className="sub">Nada más.</p>
             <p className="copy">Por ahora trabajamos una sola tortilla: la que hacemos con nuestro Cónico Cremoso.</p>
             <figure className="package-photo">
-              <img src={packages.url} alt="Paquetes de tortillas de Memorias de Maíz, Cónico Cremoso" loading="lazy" width="768" height="1024" />
+              <img src={packages} alt="Paquetes de tortillas de Memorias de Maíz, Cónico Cremoso" loading="lazy" width="768" height="1024" />
             </figure>
           </div>
 
