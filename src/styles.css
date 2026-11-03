@@ -212,13 +212,15 @@ html{scroll-behavior:smooth;}
 .mm .hero{padding-bottom:0 !important;}
 .mm .hero > .wrap:last-child{max-width:none; padding:0; margin-top:96px; background:var(--mm-paper); position:relative; z-index:1;}
 .mm .sample-callout{max-width:1020px; margin:0 auto; padding:56px 24px; display:grid; grid-template-columns:1fr auto 1fr; align-items:center; text-align:center; animation:mmRise .9s cubic-bezier(.2,.8,.2,1) both;}
-.mm .sample-callout .sc-info{display:flex; flex-direction:column; align-items:center; gap:12px; padding-right:44px; border-right:1px solid var(--mm-line);}
+.mm .sample-callout .sc-info{display:flex; flex-direction:column; align-items:center; gap:12px; padding-right:44px;}
 .mm .sample-callout .count{display:flex; align-items:center; gap:14px;}
 .mm .sample-callout .big{font-family:var(--mm-serif); font-size:4.4rem; line-height:1; font-weight:300; color:var(--mm-tierra-deep); font-style:italic; letter-spacing:-0.02em;}
 .mm .sample-callout .label{font-weight:600; font-size:1.02rem; max-width:9ch; line-height:1.25; text-align:left;}
 .mm .sample-callout .urge{font-family:var(--mm-serif); font-style:italic; font-size:1.15rem; color:var(--mm-tierra); letter-spacing:-0.01em;}
 .mm .sample-callout .btn{margin:0; white-space:nowrap;}
-.mm .sample-fine{max-width:32ch; font-size:.85rem; line-height:1.65; color:var(--mm-ink-soft); text-align:left; padding-left:44px; border-left:1px solid var(--mm-line); justify-self:start;}
+.mm .sample-fine{max-width:32ch; font-size:.85rem; line-height:1.65; color:var(--mm-ink-soft); text-align:left; padding-left:44px; justify-self:start;}
+.mm .sample-fine a{color:var(--mm-tierra-deep); font-weight:600; text-decoration:none; border-bottom:1px solid oklch(0.38 0.075 42 / .35); transition:border-color .2s;}
+.mm .sample-fine a:hover{border-bottom-color:currentColor;}
 @keyframes mmRise{from{opacity:0; transform:translateY(16px);}to{opacity:1; transform:none;}}
 
 /* about */
@@ -345,7 +347,9 @@ html{scroll-behavior:smooth;}
   .mm .maize-head{margin-bottom:48px;}
   .mm .spec-card{position:static; padding:30px;}
   .mm .hero > .wrap:last-child{margin-top:72px;}
-  .mm .sample-callout{padding:56px 24px 64px;}
+  .mm .sample-callout{padding:56px 24px 64px; grid-template-columns:1fr; justify-items:center; gap:26px;}
+  .mm .sample-callout .sc-info{padding-right:0;}
+  .mm .sample-fine{max-width:44ch; text-align:center; padding-left:0; justify-self:center;}
   .mm .variety-card{padding:34px 26px;}
   .mm .distributor{padding:36px 26px;}
   .mm .wa-mini{padding:8px 14px; font-size:.8rem;}
