@@ -6,3 +6,5 @@
 - [x] Verify desktop and mobile appearance, image loading and existing navigation.
 - [x] Move the floating WhatsApp button to the bottom left so the Netlify badge does not cover it.
 - [x] Apply negative letter spacing to Crimson Pro text.
+- [x] Remove the vertical separator lines beside the "Apartar mi muestra" button and stack the band on mobile.
+- [x] Link "Pabellón Instantes Prolongados" to the Google Maps location in a new tab.
