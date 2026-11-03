@@ -52,7 +52,7 @@ function Index() {
               <p className="urge">Pruébalas, hay solo 3 al día, mientras haya existencias.</p>
             </div>
             <a className="btn btn-primary" href={`${WA}?text=Hola%2C%20quiero%20apartar%20una%20muestra%20gratis`} target="_blank" rel="noopener">Apartar mi muestra</a>
-            <p className="sample-fine">Pruebas y entregas en el Pabellón Instantes Prolongados (el de los tubos rojos, en la cuchilla de Orinoco y Colorado). Pickup únicamente.</p>
+            <p className="sample-fine">Pruebas y entregas en el <a href="https://maps.app.goo.gl/35sQ5xQVtZBrD9AK6" target="_blank" rel="noopener">Pabellón Instantes Prolongados</a> (el de los tubos rojos, en la cuchilla de Orinoco y Colorado). Pickup únicamente.</p>
           </div>
         </div>
       </section>
