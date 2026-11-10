@@ -400,3 +400,5 @@ html{scroll-behavior:smooth;}
   .mm .biz-stats strong{font-size:1.9rem;}
   .mm .distributor .go-link{margin-left:0; display:block; width:max-content;}
 }
+.mm .logo-link{flex-shrink:0;}
+@media (max-width:520px){ .mm .topbar-nav .nav-link[href="/guia"]{display:none;} }
