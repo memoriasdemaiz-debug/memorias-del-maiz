@@ -11,6 +11,7 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as GuiaRouteImport } from './routes/guia'
+import { Route as NegocioRouteImport } from './routes/negocio'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -22,31 +23,40 @@ const GuiaRoute = GuiaRouteImport.update({
   path: '/guia',
   getParentRoute: () => rootRouteImport,
 } as any)
+const NegocioRoute = NegocioRouteImport.update({
+  id: '/negocio',
+  path: '/negocio',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/guia': typeof GuiaRoute
+  '/negocio': typeof NegocioRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/guia': typeof GuiaRoute
+  '/negocio': typeof NegocioRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/guia': typeof GuiaRoute
+  '/negocio': typeof NegocioRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/guia'
+  fullPaths: '/' | '/guia' | '/negocio'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/guia'
-  id: '__root__' | '/' | '/guia'
+  to: '/' | '/guia' | '/negocio'
+  id: '__root__' | '/' | '/guia' | '/negocio'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   GuiaRoute: typeof GuiaRoute
+  NegocioRoute: typeof NegocioRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -65,12 +75,20 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof GuiaRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/negocio': {
+      id: '/negocio'
+      path: '/negocio'
+      fullPath: '/negocio'
+      preLoaderRoute: typeof NegocioRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   GuiaRoute: GuiaRoute,
+  NegocioRoute: NegocioRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
