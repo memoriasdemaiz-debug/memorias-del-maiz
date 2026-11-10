@@ -13,6 +13,7 @@ export function Topbar() {
         </Link>
         <nav className="topbar-nav" aria-label="Principal">
           <Link to="/guia" className="nav-link" activeProps={{ "aria-current": "page" }}>Guía de uso</Link>
+          <Link to="/negocio" className="nav-link" activeProps={{ "aria-current": "page" }}>Para negocios</Link>
           <a className="wa-mini" href={`${WA}?text=Hola%2C%20quiero%20probar%20las%20tortillas%20de%20Memorias%20de%20Ma%C3%ADz`} target="_blank" rel="noopener">Pide por WhatsApp</a>
         </nav>
       </div>
@@ -28,6 +29,7 @@ export function SiteFooter() {
           <Link to="/" className="brand-mark">Memorias <em>de Maíz</em></Link>
           <nav className="footer-links" aria-label="Pie de página">
             <Link to="/guia">Guía de uso</Link>
+            <Link to="/negocio">Para negocios</Link>
             <a href={IG} target="_blank" rel="noopener">@memoriasdemaiz</a>
             <a href={WA} target="_blank" rel="noopener">WhatsApp</a>
           </nav>

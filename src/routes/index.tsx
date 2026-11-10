@@ -167,6 +167,7 @@ function Index() {
             <h3>¿Quieres llevar Memorias de Maíz a otro lugar?</h3>
             <p>Estamos buscando restaurantes, tiendas y proyectos que quieran trabajar con nuestros maíces y tortillas. Si te interesa distribuir Memorias de Maíz, escríbenos.</p>
             <a className="btn btn-primary" href={`${WA}?text=Hola%2C%20me%20interesa%20distribuir%20Memorias%20de%20Ma%C3%ADz`} target="_blank" rel="noopener">Escríbenos</a>
+            <Link to="/negocio" className="go-link">Ver información para negocios →</Link>
           </div>
         </div>
       </section>
