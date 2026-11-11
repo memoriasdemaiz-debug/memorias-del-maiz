@@ -402,3 +402,24 @@ html{scroll-behavior:smooth;}
 }
 .mm .logo-link{flex-shrink:0;}
 @media (max-width:520px){ .mm .topbar-nav .nav-link[href="/guia"]{display:none;} }
+
+/* Pagos (página privada, no enlazada) */
+.mm.pay{min-height:100vh; display:flex; align-items:center; justify-content:center; padding:48px 20px;}
+.mm .pay-card{width:100%; max-width:420px; text-align:center; position:relative; z-index:1;}
+.mm .pay-logo img{width:190px; height:auto; margin:0 auto 36px; display:block;}
+.mm .pay-card h1{font-family:var(--mm-serif); font-weight:400; font-size:2.6rem; line-height:1.05; letter-spacing:-0.02em; margin:0 0 12px;}
+.mm .pay-card h1 em{color:var(--mm-tierra-deep);}
+.mm .pay-msg{color:var(--mm-ink-soft, var(--mm-ink)); opacity:.8; max-width:32ch; margin:0 auto 32px; font-size:.95rem; line-height:1.6;}
+.mm .pay-box{background:var(--mm-paper); border:1px solid var(--mm-line); border-radius:6px; text-align:left; overflow:hidden;}
+.mm .pay-box-head{padding:12px 20px; font-size:.68rem; letter-spacing:.2em; text-transform:uppercase; border-bottom:1px solid var(--mm-line); background:var(--mm-masa);}
+.mm .pay-row{display:flex; align-items:center; justify-content:space-between; gap:16px; padding:14px 20px; border-bottom:1px solid var(--mm-line);}
+.mm .pay-row:last-child{border-bottom:0;}
+.mm .pay-row > div{display:flex; flex-direction:column; gap:3px; min-width:0;}
+.mm .pay-label{font-size:.66rem; letter-spacing:.18em; text-transform:uppercase; opacity:.65;}
+.mm .pay-value{font-size:1rem; font-weight:500; overflow-wrap:anywhere;}
+.mm .pay-copy, .mm .pay-all{font-family:inherit; cursor:pointer; background:transparent; color:var(--mm-ink); border:1px solid var(--mm-line); border-radius:999px; font-size:.72rem; font-weight:600; letter-spacing:.08em; text-transform:uppercase; transition:all .15s;}
+.mm .pay-copy{flex-shrink:0; padding:8px 14px; min-width:92px;}
+.mm .pay-all{width:100%; margin-top:14px; padding:14px;}
+.mm .pay-copy:hover, .mm .pay-all:hover{border-color:var(--mm-ink);}
+.mm .pay-copy.is-done, .mm .pay-all.is-done{color:var(--mm-milpa); border-color:var(--mm-milpa);}
+.mm .pay-home{display:inline-block; margin-top:28px; font-size:.78rem; letter-spacing:.14em; text-transform:uppercase; color:var(--mm-ink); opacity:.7;}
