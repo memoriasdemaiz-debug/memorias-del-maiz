@@ -12,6 +12,7 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as GuiaRouteImport } from './routes/guia'
 import { Route as NegocioRouteImport } from './routes/negocio'
+import { Route as PagosRouteImport } from './routes/pagos'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -28,35 +29,44 @@ const NegocioRoute = NegocioRouteImport.update({
   path: '/negocio',
   getParentRoute: () => rootRouteImport,
 } as any)
+const PagosRoute = PagosRouteImport.update({
+  id: '/pagos',
+  path: '/pagos',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/guia': typeof GuiaRoute
   '/negocio': typeof NegocioRoute
+  '/pagos': typeof PagosRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/guia': typeof GuiaRoute
   '/negocio': typeof NegocioRoute
+  '/pagos': typeof PagosRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/guia': typeof GuiaRoute
   '/negocio': typeof NegocioRoute
+  '/pagos': typeof PagosRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/guia' | '/negocio'
+  fullPaths: '/' | '/guia' | '/negocio' | '/pagos'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/guia' | '/negocio'
-  id: '__root__' | '/' | '/guia' | '/negocio'
+  to: '/' | '/guia' | '/negocio' | '/pagos'
+  id: '__root__' | '/' | '/guia' | '/negocio' | '/pagos'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   GuiaRoute: typeof GuiaRoute
   NegocioRoute: typeof NegocioRoute
+  PagosRoute: typeof PagosRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -82,6 +92,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof NegocioRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/pagos': {
+      id: '/pagos'
+      path: '/pagos'
+      fullPath: '/pagos'
+      preLoaderRoute: typeof PagosRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
@@ -89,6 +106,7 @@ const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   GuiaRoute: GuiaRoute,
   NegocioRoute: NegocioRoute,
+  PagosRoute: PagosRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
